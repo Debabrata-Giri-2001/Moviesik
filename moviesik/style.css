@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+}
+
+/* loader */
+#loading {
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 99;
+    background-color: #2E3238;
+}
+
+#loading-image {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    z-index: 100
+}
+
+/* Nab Bar ⬇️*/
+.Nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 12px;
+
+    background: #2C3531;
+}
+
+.logo {
+    color: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search_list {
+    margin-left: 50%;
+    width: 40%;
+    height: 35vh;
+    overflow-y: scroll;
+    position: absolute;
+
+}
+
+.search_item_thumbnail {
+    width: 35%;
+}
+
+.search_item_info {
+    padding: 5%;
+    color: #D1E8E2;
+}
+
+.hide_search_list {
+    display: none;
+}
+
+.listContent {
+    display: flex;
+    flex-direction: row;
+    background-color: #2C3531;
+    padding: 8px;
+}
+
+.search {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4b4b54;
+    outline: none;
+    border: solid #787785;
+    border-radius: 8px;
+}
+
+/* Nab Bar 🔝 */
+
+/* Poster */
+.moviesPoster {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.moviesDet {
+    width: 50%;
+}
+
+.movieTitle {
+    padding: 1rem;
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background: linear-gradient(to left, #D1E8E2, #116466);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.poster {
+    background: #1e2e2e;
+    display: flex;
+    flex-direction: row;
+}
+
+.moviesPoster img {
+    border-radius: 15px;
+    margin: 1.5rem;
+    width: 45%;
+    transition: transform .3s;
+    border: solid 2px #D1E8E2;
+}
+
+.moviesPoster img:hover {
+    width: 45%;
+    border: solid 2px #D1E8E2;
+    transform: scale(1.14);
+    box-shadow: 0px 0px 50px 7px rgba(209, 232, 226, 1);
+
+}
+
+
+.listDet {
+    color: #74f0f3;
+    font-family: serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.listLi1,
+.listLi2,
+.listLi3,
+.listLi4 {
+    font-size: 1.2rem;
+    margin-left: 25px;
+}
+
+.listLi1,
+.listLi2 {
+    list-style: none;
+}
+
+.listLi1 {
+    padding: 2px;
+    border-radius: 4px;
+    color: #FFF;
+    border: solid #FFF 1px;
+}
+
+.imdb {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: fit-content;
+    font-weight: bolder;
+    color: #FDEBEB;
+    background-color: #787785;
+    border: solid #FFCB9A;
+    padding: 12px;
+    border-radius: 50%;
+
+    transition: transform .2s;
+}
+
+.imdb:hover {
+    transform: scale(1.15);
+}
+
+.rating {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #D1E8E2;
+}
+
+.plot {
+    padding: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #D1E8E2;
+}
+
+.plotPara {
+    padding: 1rem;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    color: #4f8f8e;
+}
+
+.directorName {
+    padding: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #D1E8E2;
+    text-decoration-line: underline;
+
+}
+
+.director {
+    padding: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid #D1E8E2;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: #116466;
+}
+
+.counryName {
+    padding: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #D1E8E2;
+    text-decoration-line: underline;
+
+}
+
+.country {
+    padding: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid #D1E8E2;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: #116466;
+}
+
+.diCou {
+    margin: 3rem;
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ______________All About This movies */
+
+.allAbout {
+    padding: 12px;
+    background-color: #2C3531;
+}
+
+.listAboutAllData {
+    margin-left: 5%;
+    padding: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #D1E8E2;
+}
+
+.allListAboutMovies {
+    display: flex;
+    flex-direction: row;
+}
+
+.actorAward {
+    width: 50%;
+}
+
+.actorAbout,
+.awardAboout {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    margin: 12px;
+    max-width: 80%;
+    justify-content: space-between;
+    background-color: #D1E8E2;
+    border: solid 4px #D9B08C;
+    border-radius: 8px;
+
+    align-items: center;
+}
+
+.actorsName,
+.awards {
+    color: #116466;
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.actorTile,
+.awardTitle {
+    color: #4b4b54;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.intentReting {
+    padding: 12px;
+    margin: 12px;
+    background-color: #D1E8E2;
+    border: solid 4px #D9B08C;
+    border-radius: 8px;
+    width: 45%;
+    align-items: center;
+}
+
+.ImdbMovieRat,
+.rottenMovi,
+.metacriticMovie {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    color: #2C3531;
+}
+
+.imdbScr {
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: fit-content;
+    font-weight: bolder;
+    color: #FDEBEB;
+    background-color: #787785;
+    border: solid #FFCB9A;
+    padding: 5px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.rotten {
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: fit-content;
+    font-weight: bolder;
+    color: #FDEBEB;
+    background-color: #787785;
+    border: solid #FFCB9A;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.metacritic {
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: fit-content;
+    font-weight: bolder;
+    color: #FDEBEB;
+    background-color: #787785;
+    border: solid #FFCB9A;
+    padding: 5px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.box_yp {
+
+    padding: 0.5rem;
+    background-color: #D1E8E2;
+    border: solid 4px #D9B08C;
+    border-radius: 8px;
+    margin: 12px;
+    width: 40%;
+}
+
+.boxOffice,
+.typeOf {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.price,
+.movies {
+    color: #787785;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.shareSite {
+    background: #2C3531;
+}
+
+.shareSite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.shareMv {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
+    color: #D1E8E2;
+    width: 50%;
+}
+
+.socialLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+    font-size: 2rem;
+    color: #D1E8E2;
+
+}
+
+.socialLogo a {
+    color: #D1E8E2;
+}
+
+.socialLogo i {
+    transition: transform .3s;
+    padding: 10px;
+}
+
+.socialLogo i:hover {
+    padding: 10px;
+    border-radius: 50%;
+    transform: scale(1.14);
+    background-color: #116466;
+}
+
+/* For responsive */
+
+@media screen and (max-width: 1123px) {
+
+    #loading-image{
+        width: inherit;
+        height: inherit;
+    }
+    .Nav {
+        padding: 8px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .search_list {
+        margin-left: 15%;
+        width: 80%; 
+        height: 35vh;
+    }
+
+    .search_item_thumbnail {
+        width: 40%;
+    }
+
+    .search {
+        width: min-content;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .search_item_info {
+        padding: 3%;
+    }
+
+    .poster {
+        display: flex;
+        flex-direction: column;
+        background: #1e2e2e;
+    }
+
+    .moviesPoster {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .moviesDet {
+        width: 100%;
+    }
+
+    .movieTitle {
+        font-size: 2.5rem;
+
+    }
+
+    .listDet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .listLi1,
+    .listLi2,
+    .listLi3,
+    .listLi4 {
+        font-size: 1.3rem;
+        /* margin-left: 18px; */
+    }
+
+    .listLi1 {
+        width: fit-content;
+        padding: 4px;
+    }
+
+    .imdb {
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    .User_Score {
+        text-align: -webkit-center;
+    }
+
+    .actorsName,
+    .awards {
+        font-size: 1.3rem;
+    }
+
+    .allListAboutMovies {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .actorAward {
+        width: 100%;
+    }
+
+    .actorAbout,
+    .awardAboout {
+        max-width: 100%;
+    }
+
+    .intentReting {
+        padding: 12px;
+        margin: 12px;
+        width: 80%;
+        align-self: center;
+    }
+
+    .imdbScr,
+    .rotten,
+    .metacritic {
+        font-size: 0.8rem;
+    }
+
+    .box_yp {
+        width: 90%;
+    }
+
+    .boxOffice,
+    .typeOf {
+        font-size: 1rem;
+    }
+
+    .shareMv {
+        font-size: 0.5rem;
+    }
+
+}
